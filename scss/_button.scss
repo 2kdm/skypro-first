@@ -1,0 +1,32 @@
+@import './general/variables';
+@import './general/media';
+
+%button {
+  height: 41px;
+  padding: 0 20px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 17px;
+  transition: all .3s ease-out;
+
+  @include mobile() {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0 5px;
+    height: 37px;
+  }
+}
+
+.outlined-button {
+  @extend %button;
+  border: 1px solid $black-border;
+  background-color: transparent;
+
+  &:hover {
+    border: 1px solid $black-border;
+    background-color: $black;
+    color: $white;
+  }
+}

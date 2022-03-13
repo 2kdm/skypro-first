@@ -1,0 +1,357 @@
+@import '../general/layout';
+@import '../general/common';
+@import '../general/variables';
+@import '../general/media';
+
+@import '../header';
+@import '../footer';
+
+@import '../product-card';
+@import '../button';
+
+.cart-heading-section {
+  background-image: url(../../assets/backgrounds/cart-heading.jpg);
+}
+
+.special-section {
+  margin-top: 64px;
+
+  @include mobile() {
+    margin-top: 48px;
+  }
+}
+
+.special-section__product-list {
+  display: flex;
+  column-gap: 32px;
+  row-gap: 56px;
+  flex-wrap: wrap;
+
+  @include tablet() {
+    column-gap: 29px;
+    row-gap: 30px;
+  }
+}
+
+.cart-section {
+  margin-top: 64px;
+  display: flex;
+  gap: 32px;
+
+  @include tablet() {
+    display: block;
+  }
+}
+
+.cart-order-form {
+  width: 379px;
+  background-color: $light-grey;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet() {
+    width: 376px;
+    height: 556px;
+    margin-top: 64px;
+  }
+
+  @include mobile() {
+    margin-top: 48px;
+    width: 100%;
+    max-width: 343px;
+    padding: 0 28px;
+  }
+
+  &__title {
+    margin-top: 42px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: $black;
+    text-align: center;
+  }
+
+  &__input {
+    border: none;
+    padding: 0 0 3px 0;
+    border-bottom: 1px solid $border-grey;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+    max-width: 288px;
+    margin-top: 41px;
+
+    &:first-child {
+      margin-top: 35px;
+    }
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  &__total {
+    margin-top: 64px;
+    font-size: 24px;
+    line-height: 29px;
+    color: $black;
+    text-align: center;
+
+    &--count {
+      font-weight: 500;
+    }
+  }
+
+  &__submit {
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%;
+    max-width: 290px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(255,255,255,0.8);
+      width: 90px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: .5;
+      filter: blur(30px);
+      transform: translateX(-100px)  skewX(-15deg);
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(255,255,255,0.3);
+      width: 50px;
+      height: 100%;
+      left: 50px;
+      top: 0;
+      opacity: 0;
+      filter: blur(15px);
+      transform: translateX(-100px) skewX(-15deg);
+    }
+
+    &:hover{
+      &:before {
+        transform: translateX(290px)  skewX(-15deg);
+        opacity: 0.6;
+        transition: all .7s ease-out;
+      }
+
+      &:after {
+        transform: translateX(290px) skewX(-15deg);
+        opacity: 1;
+        transition: all .7s ease-out;
+      }
+    }
+  }
+}
+
+.cart-content {
+  flex-grow: 1;
+
+  &__top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+    border-top: 0.5px solid $border-grey;
+
+    @include mobile() {
+      padding-top: 18px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 8px;
+
+    @include tablet() {
+      margin-top: 0;
+    }
+
+    @include mobile() {
+      margin-top: 8px;
+      gap: 14px;
+    }
+  }
+
+  &__action {
+    width: 200px;
+
+    @include mobile() {
+      flex-grow: 1;
+      width: auto;
+      max-width: 200px;
+    }
+  }
+}
+
+
+.item {
+  &__info {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 173px;
+    height: 173px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $black;
+    margin-bottom: 14px;
+
+    @include mobile() {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey;
+    margin-bottom: 16px;
+    max-width: 276px;
+
+    @include mobile() {
+      font-size: 12px;
+      line-height: 14px;
+      max-width: 253px;
+    }
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    margin-bottom: 15px;
+
+    @include mobile() {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__action {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 14px;
+    line-height: 210%;
+    text-decoration: underline;
+    color: $black;
+    cursor: pointer;
+    transition: color .3s ease-out;
+
+    &:hover {
+      color: $grey;
+      text-decoration: none;
+    }
+  }
+
+  &__amount {
+    flex-shrink: 0;
+    width: 71px;
+    border-radius: 6px;
+    background-color: $light-grey;
+    position: relative;
+    padding: 12px 0;
+    align-self: flex-start;
+
+    &-counter {
+      width: 47px;
+
+      input {
+        width: 100%;
+        border: none;
+        background: none;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 27px;
+        text-align: center;
+        color: $black;
+        -webkit-appearance: none;
+        outline: none;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+    }
+
+    &-controls {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 14px;
+      top: 9px;
+    }
+
+    &-control {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+
+      .app-icon {
+        fill: $input-icon-grey;
+
+        &:hover {
+          fill: $black;
+        }
+      }
+
+      &--down {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import 'variables';
+@import '_media';
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.link-hover:hover {
+  text-decoration: underline;
+}
+
+.section-heading {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  margin-bottom: 32px;
+  color: $black;
+
+  @include small-tablet() {
+    font-size: 47px;
+  }
+
+  @include mobile() {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.heading-section {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 70px;
+
+    @include mobile() {
+      font-size: 48px;
+      line-height: 58px;
+      align-self: center;
+      align-items: flex-start;
+      margin-top: 82px;
+    }
+  }
+}
+
+.app-icon {
+  transition: opacity .3s ease-out, fill .3s ease-out;
+}

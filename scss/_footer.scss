@@ -1,0 +1,163 @@
+@import 'general/variables';
+@import 'general/media';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  background-color: $light-grey;
+  padding-top: 32px;
+  padding-bottom: 40px;
+
+  @include tablet() {
+    .footer-logo {
+      display: none;
+    }
+  }
+
+  @include mobile() {
+    margin-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .footer-form {
+      display: flex;
+      align-self: center;
+      margin-top: 32px;
+    }
+  }
+
+  .footer-column--central {
+    display: flex;
+    gap: 120px;
+
+    @include tablet() {
+      gap: 130px;
+    }
+
+    @include mobile() {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+
+      .footer-menu, .footer-contacts {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  .footer-menu,
+  .footer-contacts,
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 18px;
+    margin-top: 16px;
+  }
+
+  .social-link {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .app-icon {
+      fill: $grey;
+
+      &:hover {
+        fill: $black;
+      }
+    }
+  }
+
+  .footer-heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $black;
+  }
+
+  .footer-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 12px;
+    color: $grey;
+    transition: color .3s ease-out;
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+
+  .subscribe-form__title {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 16px;
+    color: $black;
+  }
+
+  .subscribe-form__input {
+    background: $white;
+    height: 46px;
+    width: 275px;
+    padding: 0 25px;
+    margin-bottom: 12px;
+    border: 1px solid $border-grey;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    outline: none;
+
+    &::placeholder {
+      color: $border-grey;
+    }
+
+    @include mobile() {
+      width: 268px;
+    }
+  }
+
+  .subscribe-form__submit {
+    background: $button-grey;
+    border: 1px solid $white;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 275px;
+    height: 46px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    cursor: pointer;
+    transition: all .3s ease-out;
+
+    &:hover {
+      background-color: $black;
+      border-color: $black;
+      color: $white;
+    }
+
+    @include mobile() {
+      width: 268px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .text-logo {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
