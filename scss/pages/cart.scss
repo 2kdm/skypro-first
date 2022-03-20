@@ -239,6 +239,11 @@
     line-height: 29px;
     color: $black;
     margin-bottom: 14px;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     @include mobile() {
       font-size: 18px;
@@ -310,6 +315,7 @@
 
       input {
         width: 100%;
+        padding: 0 6px;
         border: none;
         background: none;
         font-weight: 600;

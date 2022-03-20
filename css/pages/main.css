@@ -422,6 +422,10 @@ button {
    line-height: 29px;
    margin-bottom: 8px;
    color: #000000;
+   display: inline-block;
+}
+.product-card__title:hover {
+   text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
    .product-card__title {

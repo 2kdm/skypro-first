@@ -422,6 +422,10 @@ button {
    line-height: 29px;
    margin-bottom: 8px;
    color: #000000;
+   display: inline-block;
+}
+.product-card__title:hover {
+   text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
    .product-card__title {
@@ -795,6 +799,10 @@ button {
    line-height: 29px;
    color: #000000;
    margin-bottom: 14px;
+   display: inline-block;
+}
+.item__label:hover {
+   text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
    .item__label {
@@ -868,6 +876,7 @@ button {
 }
 .item__amount-counter input {
    width: 100%;
+   padding: 0 6px;
    border: none;
    background: none;
    font-weight: 600;

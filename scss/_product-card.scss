@@ -15,6 +15,11 @@
     line-height: 29px;
     margin-bottom: 8px;
     color: $black;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     @include mobile() {
       font-size: 18px;
