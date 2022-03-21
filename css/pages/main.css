@@ -615,6 +615,7 @@ button {
    font-weight: 600;
    font-size: 34px;
    line-height: 41px;
+   text-transform: uppercase;
    color: #FFFFFF;
 }
 @media screen and (max-width: 1024px) {
@@ -647,19 +648,19 @@ button {
       grid-column: span 12;
    }
 }
-.for-section__item--1 {
+.for-section__item:nth-of-type(1) {
    background-image: url("../../assets/backgrounds/for-1.jpg");
 }
-.for-section__item--2 {
+.for-section__item:nth-of-type(2) {
    background-image: url("../../assets/backgrounds/for-2.jpg");
 }
-.for-section__item--3 {
+.for-section__item:nth-of-type(3) {
    background-image: url("../../assets/backgrounds/for-3.jpg");
 }
-.for-section__item--4 {
+.for-section__item:nth-of-type(4) {
    background-image: url("../../assets/backgrounds/for-4.jpg");
 }
-.for-section__item--5 {
+.for-section__item:nth-of-type(5) {
    background-image: url("../../assets/backgrounds/for-5.jpg");
 }
 

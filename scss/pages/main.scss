@@ -106,6 +106,7 @@
     font-weight: 600;
     font-size: 34px;
     line-height: 41px;
+    text-transform: uppercase;
     color: $white;
 
     @include tablet() {
@@ -133,7 +134,7 @@
     }
 
     @for $i from 1 through 5 {
-      &--#{$i} {
+      &:nth-of-type(#{$i}) {
         background-image: url('../../assets/backgrounds/for-#{$i}.jpg');
       }
     }
